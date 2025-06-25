@@ -13,13 +13,15 @@ const SearchBox = () => {
     return (
         <>
             <div className='flex items-center justify-between gap-5 bg-gray-200 py-2.5 px-5 rounded-3xl mt-10'>
-                <input
-                    onChange={(e) => setInput(e.target.value)}
-                    value={input}
-                    className='flex-1 border-0 outline-none bg-transparent p-2 text-lg'
-                    type='text'
-                    placeholder='Enter your prompt here!' />
-                <div className='flex flex-row items-center gap-2'>
+                <div className='min-w-[200px] max-w-full overflow-hidden'>
+                    <input
+                        onChange={(e) => setInput(e.target.value)}
+                        value={input}
+                        className='flex-1 border-0 outline-none bg-transparent p-2 text-lg'
+                        type='text'
+                        placeholder='Enter your prompt here!' />
+                </div>
+                <div className='flex flex-row items-center p-2 gap-2'>
                     {imageSearchBox.map((item, index) => {
                         return (
                             <img
